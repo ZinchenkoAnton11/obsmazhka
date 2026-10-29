@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Обсмажка — кейс: бренд, лендинг та інтернет-магазин</title>
+<meta name="description" content="Концепт-проєкт: айдентика, лендинг та інтернет-магазин для кавової обсмажувальні. Ідея, кольори, шрифти, рішення й етапи роботи.">
+<meta property="og:title" content="Обсмажка — бренд, лендинг та інтернет-магазин">
+<meta property="og:description" content="Концепт-проєкт для кавової обсмажувальні: від логотипу до робочого кошика.">
+<meta property="og:image" content="img/shop-home-d.jpg">
+<meta name="theme-color" content="#E7EBE1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Сторінка-кейс: та сама мова бренду, але спокійніша — це розповідь, а не вітрина */
+:root{
+  --sack:#E7EBE1;--sack-2:#DCE2D3;--paper:#F3EFE6;--kraft:#C49B6E;
+  --ink:#1E2420;--ink-soft:#4A534C;--line:rgba(30,36,32,.16);
+  --green:#8C9A5E;--light:#C9A46A;--medium:#8E5530;--dark:#4A2B1C;--espresso:#24160F;--stamp:#2D4FC4;
+  --display:"Unbounded","Inter",system-ui,sans-serif;--text:"Golos Text","Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sack);color:var(--ink);font:400 17px/1.6 var(--text)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:3px;border-radius:6px}
+img{display:block;max-width:100%;height:auto}
+p,li{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font:700 18px/1 var(--display);letter-spacing:-.02em}
+.logo img{width:32px;height:32px}
+.top nav{display:flex;gap:18px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--ink-soft)}
+.top nav a:hover{color:var(--ink)}
+
+.hero{padding-block:28px 40px}
+.hero h1{font:700 clamp(40px,11vw,104px)/.95 var(--display);letter-spacing:-.045em;margin:0 0 20px}
+.hero .lead{font-size:clamp(18px,2.4vw,22px);line-height:1.5;max-width:40ch;margin:0 0 28px}
+.btns{display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;justify-content:center;align-items:center;font:600 17px/1 var(--text);text-decoration:none;border-radius:12px;padding:18px 24px;white-space:nowrap}
+.btn-main{background:var(--ink);color:var(--sack)}
+.btn-main:hover{background:#000}
+.btn-line{border:2px solid var(--ink);padding:16px 22px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:36px 0 0;border-top:2px solid var(--ink)}
+.facts div{padding:14px 12px 14px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:13px;color:var(--ink-soft)}
+.facts dd{margin:3px 0 0;font-weight:600;line-height:1.35}
+
+/* пристрої */
+.devices{position:relative;margin:40px 0 0;padding-bottom:6%}
+.browser{border:2px solid var(--ink);border-radius:14px;overflow:hidden;background:var(--paper)}
+.browser .bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:2px solid var(--ink);background:var(--paper)}
+.browser .bar i{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink)}
+.browser .bar span{margin-left:10px;font-size:12px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phone{border:7px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--ink)}
+.devices .phone{position:absolute;right:-1%;bottom:0;width:27%;box-shadow:0 24px 50px rgba(30,36,32,.25)}
+.devices .browser{width:86%}
+
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec{display:grid;gap:22px}
+.sec-head h2{font:700 clamp(26px,5.6vw,40px)/1.1 var(--display);letter-spacing:-.03em;margin:0}
+.sec-head .n{display:block;font:500 15px/1 var(--display);color:var(--stamp);margin-bottom:12px}
+.body{min-width:0;max-width:68ch}
+.body p{margin:0 0 16px}
+.body ul{margin:0 0 16px;padding-left:20px}
+.body li{margin:6px 0}
+.big-quote{font:500 clamp(20px,3vw,26px)/1.4 var(--text);margin:0 0 18px}
+figure{margin:28px 0 0}
+figcaption{font-size:14px;color:var(--ink-soft);margin-top:10px}
+
+/* айдентика */
+.mark-row{display:flex;gap:22px;align-items:center;background:var(--paper);border-radius:18px;padding:22px;margin:0 0 26px}
+.mark-row img{width:84px;height:84px;flex:none}
+.mark-row b{display:block;font:700 26px/1.1 var(--display);letter-spacing:-.02em;margin-bottom:6px}
+.mark-row span{color:var(--ink-soft);font-size:15px}
+.swatches{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.swatches li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);margin:0}
+.sw{height:52px;border-radius:12px;border:1px solid var(--line)}
+.sw.scale{background:linear-gradient(90deg,var(--green),var(--light),var(--medium),var(--dark),var(--espresso))}
+.swatches b{display:block;font-weight:600}
+.swatches span{font-size:15px;color:var(--ink-soft)}
+.swatches code{font:500 13px var(--text);color:var(--ink-soft);margin-left:6px}
+.type{display:grid;gap:12px;margin:0 0 20px}
+.type>div{background:var(--paper);border-radius:18px;padding:20px 22px}
+.type .spec{font-size:44px;line-height:1;margin-bottom:10px}
+.type .d .spec{font-family:var(--display);font-weight:700;letter-spacing:-.03em}
+.type .t .spec{font-family:var(--text);font-weight:500}
+.type b{display:block}
+.type span{font-size:15px;color:var(--ink-soft)}
+
+/* галереї */
+.phones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px;margin-top:28px}
+.phones figure{margin:0}
+.phones .phone{border-width:5px;border-radius:22px}
+.desks{display:grid;gap:22px;margin-top:28px}
+.desks figure{margin:0}
+.note{background:var(--paper);border-radius:14px;padding:16px 18px;font-size:15px;color:var(--ink-soft);margin:22px 0 0}
+
+/* техніка */
+.cards{display:grid;gap:12px}
+.cards div{border:2px solid var(--ink);border-radius:16px;padding:18px 20px}
+.cards b{display:block;font:700 16px/1.3 var(--display);margin-bottom:6px}
+.cards span{font-size:15px;color:var(--ink-soft)}
+
+/* етапи */
+.steps{list-style:none;counter-reset:s;margin:0;padding:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--line);margin:0}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font:700 13px/1 var(--display)}
+.steps b{display:block}
+.steps span{color:var(--ink-soft);font-size:15px}
+
+.cta-end{background:var(--ink);color:var(--sack);border-radius:22px;padding:30px 22px;display:grid;gap:18px}
+.cta-end h2{font:700 clamp(24px,5vw,36px)/1.15 var(--display);letter-spacing:-.03em;margin:0}
+.cta-end .btn-main{background:var(--sack);color:var(--ink)}
+.cta-end .btn-line{border-color:var(--sack);color:var(--sack)}
+footer{padding-block:32px 48px;font-size:14px;color:var(--ink-soft)}
+footer p{margin:4px 0}
+
+@media (min-width:760px){
+  .wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}
+  .hero{padding-block:56px 64px}
+  .btns{flex-direction:row}
+  .facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+  section{padding-block:88px}
+  .sec{grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:48px}
+  .sec-head{position:sticky;top:24px;align-self:start}
+  .phones{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+  .phones.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .type{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .cta-end{grid-template-columns:minmax(0,1fr) auto;align-items:center;padding:44px}
+  .cta-end .btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#"><img src="favicon.svg" alt="" width="32" height="32">обсмажка</a>
+    <nav aria-label="Сайти проєкту"><a href="shop/">Магазин</a><a href="landing/">Лендинг</a></nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Обсмажка</h1>
+      <p class="lead">Бренд, лендинг та інтернет-магазин для невеликої кавової обсмажувальні. Бренд вигаданий, а&nbsp;все інше зроблено так, як для справжнього клієнта.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="shop/">Відкрити магазин</a>
+        <a class="btn btn-line" href="landing/">Відкрити лендинг</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Формат</dt><dd>Концепт для портфоліо</dd></div>
+        <div><dt>Що зроблено</dt><dd>Логотип і&nbsp;стиль, лендинг, магазин</dd></div>
+        <div><dt>Інструменти</dt><dd>HTML, CSS, JavaScript, SVG</dd></div>
+        <div><dt>Екрани</dt><dd>Від 320 до&nbsp;1440&nbsp;px</dd></div>
+      </dl>
+      <div class="devices">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>обсмажка — магазин</span></div><img src="img/shop-home-d.jpg" alt="Головна сторінка магазину: заголовок «Смажимо в понеділок. У вас — у середу», пакет кави та графік тижня" width="1440" height="900"></div>
+        <div class="phone"><img src="img/shop-product-m.jpg" alt="Картка сорту Ефіопія Іргачеффе на телефоні" width="780" height="1688"></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">01</span><h2>Задача</h2></div>
+        <div class="body">
+          <p class="big-quote">Обсмажувальня смажить каву малими партіями щопонеділка й&nbsp;продає її поштою та за&nbsp;підпискою.</p>
+          <p>Її конкуренти&nbsp;— супермаркети й&nbsp;великі бренди, у&nbsp;яких кава лежить на&nbsp;складі місяцями. Сайт мав за&nbsp;кілька секунд пояснити головну перевагу, свіжість, і&nbsp;дати замовити каву без дзвінків і&nbsp;переписки.</p>
+          <p>Звідси два продукти: лендинг, який веде до&nbsp;підписки, і&nbsp;повноцінний магазин з&nbsp;каталогом, кошиком та оформленням замовлення.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">02</span><h2>Головна ідея</h2></div>
+        <div class="body">
+          <p>Свіжість важко довести словами, тому ми показали її як графік. Перше, що бачить відвідувач,&nbsp;— тиждень, де понеділок&nbsp;— день обсмаження, вівторок&nbsp;— відправка, а&nbsp;середа&nbsp;— кава вже вдома.</p>
+          <p>Ту саму думку повторює синій штамп з&nbsp;датою на&nbsp;кожному пакеті. Дату не&nbsp;вписано вручну: сайт сам підставляє останній понеділок, тож вона завжди актуальна.</p>
+          <figure><div class="browser"><div class="bar"><i></i><i></i><i></i><span>обсмажка — лендинг</span></div><img src="img/landing-d.jpg" alt="Перший екран лендингу з графіком тижня" width="1440" height="900" loading="lazy"></div>
+          <figcaption>Перший екран: заголовок, пакет зі штампом і&nbsp;графік тижня.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">03</span><h2>Айдентика</h2></div>
+        <div class="body">
+          <div class="mark-row"><img src="favicon.svg" alt="Знак обсмажки: круглий штамп із кавовим зерном" width="84" height="84"><div><b>обсмажка</b><span>Круглий штамп, як на&nbsp;мішках із&nbsp;зеленим зерном. Усередині зерно, у&nbsp;якого борозенка вигнута язичком полум'я: обсмаження в&nbsp;одному символі.</span></div></div>
+          <p>Палітру взято з&nbsp;матеріалів самої обсмажувальні, а&nbsp;не&nbsp;з&nbsp;каталогу трендів. Типовий «кремовий фон і&nbsp;теракотовий акцент» ми свідомо відкинули: так виглядають сотні кавових сайтів.</p>
+          <ul class="swatches">
+            <li><span class="sw" style="background:var(--sack)"></span><div><b>Мішковина <code>#E7EBE1</code></b><span>Фон сторінки. Холодний сіро-зелений замість звичного кремового.</span></div></li>
+            <li><span class="sw" style="background:var(--kraft)"></span><div><b>Крафт <code>#C49B6E</code></b><span>Пакети з&nbsp;кавою, головна ілюстрація.</span></div></li>
+            <li><span class="sw scale"></span><div><b>Шкала обсмаження</b><span>Від зеленого зерна до&nbsp;еспресо. Показує, наскільки обсмажено кожен сорт: на&nbsp;шкалі, на&nbsp;етикетці, у&nbsp;кольорі зерна.</span></div></li>
+            <li><span class="sw" style="background:var(--stamp)"></span><div><b>Штамп <code>#2D4FC4</code></b><span>Єдиний яскравий колір. Лише для дати обсмаження, кількості в&nbsp;кошику й&nbsp;підсвітки.</span></div></li>
+            <li><span class="sw" style="background:var(--ink)"></span><div><b>Графіт <code>#1E2420</code></b><span>Текст, кнопки, рамки.</span></div></li>
+          </ul>
+          <div class="type">
+            <div class="d"><div class="spec">Аа Бб</div><b>Unbounded</b><span>Заголовки. Широкий гротеск з&nbsp;характером і&nbsp;повною кирилицею.</span></div>
+            <div class="t"><div class="spec">Аа Бб</div><b>Golos Text</b><span>Основний текст. Спроєктований під&nbsp;кирилицю, легко читається дрібним кеглем на&nbsp;телефоні.</span></div>
+          </div>
+          <p>Правила набору, яких дотримано по&nbsp;всьому сайту:</p>
+          <ul>
+            <li>короткі слова («в», «у», «з», «на», «для») не&nbsp;лишаються в&nbsp;кінці рядка;</li>
+            <li>заголовки розбито за&nbsp;змістом: кожне речення з&nbsp;нового рядка, без&nbsp;«висячих» літер;</li>
+            <li>розмір головного заголовка залежить від ширини колонки, тому широкий шрифт не&nbsp;вилазить за&nbsp;край на&nbsp;жодному екрані.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">04</span><h2>Ілюстрації без фото</h2></div>
+        <div class="body">
+          <p>Фото кави легко купити на&nbsp;стоках, але тоді сайт виглядає як сотні інших. Тому всю графіку намальовано кодом (SVG):</p>
+          <ul>
+            <li><b>Пакет.</b> Один шаблон на&nbsp;всі сорти: назва, колір смужки й&nbsp;ступінь обсмаження беруться з&nbsp;даних товару. Додати новий сорт&nbsp;— це один рядок, а&nbsp;не&nbsp;нова фотосесія.</li>
+            <li><b>Обсмажувач.</b> На&nbsp;сторінці історії він анімований: обертається барабан із&nbsp;зерном, з&nbsp;труби йде дим, на&nbsp;столі охолодження крутиться мішалка.</li>
+            <li><b>Зерна.</b> На&nbsp;шкалі й&nbsp;у&nbsp;списку сортів кожне зерно має колір свого обсмаження.</li>
+          </ul>
+          <p>Уся графіка займає кілька кілобайтів і&nbsp;лишається чіткою на&nbsp;будь-якому екрані.</p>
+          <figure><div class="browser"><div class="bar"><i></i><i></i><i></i><span>обсмажка — історія</span></div><img src="img/shop-story-d.jpg" alt="Сторінка історії з&nbsp;намальованим обсмажувачем" width="1440" height="900" loading="lazy"></div>
+          <figcaption>Анімований обсмажувач на&nbsp;сторінці «Історія».</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">05</span><h2>Лендинг</h2></div>
+        <div class="body">
+          <p>Одна сторінка, яка веде до&nbsp;підписки:</p>
+          <ul>
+            <li>графік тижня й&nbsp;пакет зі&nbsp;штампом, який «ставиться» під час завантаження;</li>
+            <li>три сорти тижня на&nbsp;шкалі обсмаження;</li>
+            <li>конструктор підписки: вага, частота, помел, ціна рахується одразу;</li>
+            <li>блок для кав'ярень і&nbsp;офісів, контакти;</li>
+            <li>мобільне меню й&nbsp;плавна прокрутка до&nbsp;потрібного блоку: блок стає по&nbsp;центру екрана й&nbsp;на&nbsp;секунду підсвічується, щоб було видно, куди привело меню.</li>
+          </ul>
+          <div class="phones three">
+            <figure><div class="phone"><img src="img/landing-m.jpg" alt="Лендинг на телефоні: перший екран" width="780" height="1688" loading="lazy"></div><figcaption>Перший екран</figcaption></figure>
+            <figure><div class="phone"><img src="img/landing-m-coffee.jpg" alt="Шкала обсмаження й сорти тижня" width="780" height="1688" loading="lazy"></div><figcaption>Сорти на&nbsp;шкалі</figcaption></figure>
+            <figure><div class="phone"><img src="img/landing-m-sub.jpg" alt="Конструктор підписки" width="780" height="1688" loading="lazy"></div><figcaption>Конструктор підписки</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">06</span><h2>Інтернет-магазин</h2></div>
+        <div class="body">
+          <p>Вісім розділів, які працюють як справжній магазин:</p>
+          <ul>
+            <li><b>Каталог</b> із&nbsp;фільтрами за&nbsp;обсмаженням і&nbsp;способом заварювання;</li>
+            <li><b>Картка сорту:</b> обробка, висота, різновид, рецепт саме для цього сорту, вибір ваги й&nbsp;помелу; пакет на&nbsp;картинці змінюється разом із&nbsp;вагою;</li>
+            <li><b>Кошик:</b> кількість, видалення, підказка «ще N&nbsp;₴ до&nbsp;безкоштовної доставки»;</li>
+            <li><b>Оформлення:</b> перевірка імені й&nbsp;телефону з&nbsp;зрозумілими підказками, різні поля для відділення, поштомата й&nbsp;кур'єра;</li>
+            <li><b>Підтвердження</b> з&nbsp;номером замовлення у&nbsp;вигляді того самого штампа;</li>
+            <li><b>Панель власника:</b> список замовлень і&nbsp;зміна статусу «нове → відправлено → отримано»;</li>
+            <li><b>Історія бренду</b> та <b>доставка</b> з&nbsp;частими питаннями.</li>
+          </ul>
+          <div class="phones">
+            <figure><div class="phone"><img src="img/shop-catalog-m.jpg" alt="Каталог з фільтрами" width="780" height="1688" loading="lazy"></div><figcaption>Каталог</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-cart-m.jpg" alt="Кошик" width="780" height="1688" loading="lazy"></div><figcaption>Кошик</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-checkout-m.jpg" alt="Оформлення замовлення" width="780" height="1688" loading="lazy"></div><figcaption>Оформлення</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-done-m.jpg" alt="Замовлення прийнято" width="780" height="1688" loading="lazy"></div><figcaption>Замовлення прийнято</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-orders-m.jpg" alt="Панель замовлень власника" width="780" height="1688" loading="lazy"></div><figcaption>Панель власника</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-menu-m.jpg" alt="Мобільне меню" width="780" height="1688" loading="lazy"></div><figcaption>Мобільне меню</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-delivery-m.jpg" alt="Доставка й часті питання" width="780" height="1688" loading="lazy"></div><figcaption>Доставка й&nbsp;питання</figcaption></figure>
+            <figure><div class="phone"><img src="img/shop-home-m.jpg" alt="Головна магазину на телефоні" width="780" height="1688" loading="lazy"></div><figcaption>Головна</figcaption></figure>
+          </div>
+          <div class="desks">
+            <figure><div class="browser"><div class="bar"><i></i><i></i><i></i><span>обсмажка — кава</span></div><img src="img/shop-catalog-d.jpg" alt="Каталог на комп'ютері" width="1440" height="900" loading="lazy"></div></figure>
+            <figure><div class="browser"><div class="bar"><i></i><i></i><i></i><span>обсмажка — Ефіопія Іргачеффе</span></div><img src="img/shop-product-d.jpg" alt="Картка сорту на комп'ютері" width="1440" height="900" loading="lazy"></div></figure>
+          </div>
+          <p class="note">У&nbsp;демо-версії замовлення зберігаються в&nbsp;браузері відвідувача. Для справжнього магазину до&nbsp;сайту треба підключити сервер або CRM для замовлень і&nbsp;онлайн-оплату.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">07</span><h2>Технічно</h2></div>
+        <div class="body">
+          <div class="cards">
+            <div><b>Без фреймворків</b><span>Чистий HTML, CSS і&nbsp;JavaScript. Магазин займає близько 70&nbsp;КБ, лендинг&nbsp;— близько 23&nbsp;КБ, без&nbsp;урахування шрифтів.</span></div>
+            <div><b>Розділи без перезавантаження</b><span>Кожен розділ має власне посилання (каталог, кошик, картка сорту), працює кнопка «Назад».</span></div>
+            <div><b>Кошик пам'ятає</b><span>Товари лишаються в&nbsp;кошику після перезавантаження сторінки чи повернення на&nbsp;сайт.</span></div>
+            <div><b>Адаптивність</b><span>Перевірено на&nbsp;ширинах 320, 360, 390, 820 і&nbsp;1440&nbsp;px: нічого не&nbsp;вилазить за&nbsp;край.</span></div>
+            <div><b>Доступність</b><span>Видимий фокус для клавіатури, підписи для кнопок-іконок, повага до&nbsp;налаштування «зменшити анімацію».</span></div>
+            <div><b>Основа для SEO</b><span>Мова сторінки, заголовки й&nbsp;описи для пошуку та соцмереж, іконка сайту.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">
+        <div class="sec-head"><span class="n">08</span><h2>Як ішла робота</h2></div>
+        <div class="body">
+          <ol class="steps">
+            <li><div><b>Перший варіант лендингу</b><span>Кремовий фон і&nbsp;теракотовий акцент виглядали шаблонно, тож від них відмовилися.</span></div></li>
+            <li><div><b>Новий напрям</b><span>Мішковина, крафт і&nbsp;штамп дати; графік тижня став головним елементом.</span></div></li>
+            <li><div><b>Правки з&nbsp;телефону</b><span>Мобільне меню й&nbsp;кнопки на&nbsp;всю ширину замість притиснутих до&nbsp;лівого краю.</span></div></li>
+            <li><div><b>Навігація</b><span>Плавна прокрутка до&nbsp;блоку, блок по&nbsp;центру екрана й&nbsp;коротка підсвітка.</span></div></li>
+            <li><div><b>Деталі</b><span>Цифри на&nbsp;шкалі замінено на&nbsp;зерна відповідного кольору, підписи вирівняно по&nbsp;центру зерен.</span></div></li>
+            <li><div><b>Типографіка</b><span>Заголовок без «висячих» слів, нерозривні пробіли по&nbsp;всьому тексту.</span></div></li>
+            <li><div><b>Ілюстрація</b><span>Намальований пакет кави зі&nbsp;штампом, що з'являється з&nbsp;анімацією.</span></div></li>
+            <li><div><b>Магазин</b><span>Логотип, каталог, картки, кошик, оформлення, історія, доставка й&nbsp;панель замовлень.</span></div></li>
+            <li><div><b>Фінальна перевірка</b><span>На&nbsp;ширині 320&nbsp;px знайшли шапку, що вилазила за&nbsp;край, і&nbsp;виправили її.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top:0;padding-top:0">
+      <div class="cta-end">
+        <h2>Подивіться, як це працює вживу</h2>
+        <div class="btns">
+          <a class="btn btn-main" href="shop/">Відкрити магазин</a>
+          <a class="btn btn-line" href="landing/">Відкрити лендинг</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Дизайн і&nbsp;розробка&nbsp;— Антон Зінченко, 2026.</p>
+    <p>Бренд «обсмажка», адреси й&nbsp;телефони на&nbsp;сайтах вигадані.</p>
+  </footer>
+</div>
+</body>
+</html>
